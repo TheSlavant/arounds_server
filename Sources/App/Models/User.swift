@@ -15,6 +15,8 @@ final class User {
     var fireID: String = ""
     var phone: String = ""
     var fullName: String = ""
+    var firstName: String = ""
+    var lastName: String = ""
     var nickname: String = ""
     var birtDay: String = ""
     var aboute: String = ""
@@ -31,6 +33,8 @@ final class User {
         fireID = js["fireID"]?.string ?? ""
         phone = js["phone"]?.string ?? ""
         fullName = js["fullName"]?.string ?? ""
+        firstName = js["firstName"]?.string ?? ""
+        lastName = js["lastName"]?.string ?? ""
         nickname = js["nickname"]?.string ?? ""
         birtDay = js["birtDay"]?.string ?? ""
         aboute = js["aboute"]?.string ?? ""
@@ -50,6 +54,8 @@ final class User {
         phone = dic["phone"] as? String ?? ""
         fireID = dic["fireID"] as? String ?? ""
         fullName = dic["fullName"] as? String ?? ""
+        firstName = dic["firstName"] as? String ?? ""
+        lastName = dic["lastName"] as? String ?? ""
         nickname = dic["nickname"] as? String ?? ""
         birtDay = dic["birtDay"] as? String ?? ""
         aboute = dic["aboute"] as? String ?? ""
@@ -76,6 +82,8 @@ extension User: JSONConvertible {
         try? json.set("fireID", fireID)
         try? json.set("phone", phone)
         try? json.set("fullName", fullName)
+        try? json.set("firstName", fullName)
+        try? json.set("lastName", fullName)
         try? json.set("nickname", nickname)
         try? json.set("birtDay", birtDay)
         try? json.set("aboute", aboute)
@@ -93,6 +101,8 @@ extension User: JSONConvertible {
         dict["fireID"] = fireID
         dict["phone"] = phone
         dict["fullName"] = fullName
+        dict["firstName"] = firstName
+        dict["lastName"] = lastName
         dict["nickname"] = nickname
         dict["birtDay"] = birtDay
         dict["aboute"] = aboute

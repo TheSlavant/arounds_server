@@ -43,6 +43,8 @@ final class UserController {
             let aboute = req.data["aboute"]?.string,
             let avatar = req.data["avatar"]?.string,
             let fullName = req.data["fullName"]?.string,
+            let firstName = req.data["firstName"]?.string,
+            let lastName = req.data["lastName"]?.string,
             let birtDay = req.data["birtDay"]?.string,
             let gender = req.data["gender"]?.int else {
                 return Response.init(status: .badRequest)
@@ -53,6 +55,8 @@ final class UserController {
         user.phone = phone
         user.nickname = nickName
         user.fullName = fullName
+        user.firstName = firstName
+        user.lastName = lastName
         user.gender = gender
         user.birtDay = birtDay
         user.aboute = aboute
